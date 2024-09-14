@@ -14,13 +14,17 @@ import re
 
 rules_url = [
     # EasyList China
-    'https://easylist-downloads.adblockplus.org/easylistchina.txt',
+    #'https://easylist-downloads.adblockplus.org/easylistchina.txt',
     # EasyList + China
-    'https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt',
+    #'https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt',
     # 乘风 广告过滤规则
-    'https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt',
+    #'https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt',
     # Peter Lowe 广告和隐私跟踪域名
-    'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus;showintro=0',
+    #'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus;showintro=0',
+    # Best Shadowrocket Rules (https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
+    #'https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_banlist_ad.conf',
+    # Anti-Ad
+    'https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt',
 ]
 
 rule = ''
