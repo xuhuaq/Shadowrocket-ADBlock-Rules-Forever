@@ -1,41 +1,27 @@
-## 最完善的 iOS Shadowrocket规则
 
-### 试更新公告
-
-由于原作者 [h2y](https://github.com/h2y) 已停止维护 [Shadowrocket-ADBlock-Rules](https://github.com/h2y/Shadowrocket-ADBlock-Rules)，Shadowrocket 再无划分如此细致精美的规则。因此我决定用自己有限的能力和技术对该项目以个人的理解进行更新与维护。**所有规则都会在每天北京时间 8:00 更新发布。**
-
-### 写在前面 —— 请保护好自己
-
-谷歌中英文的搜索体验都优于百度，而刷美剧、ins 追星、去推特看看特朗普也都挺有意思。但是，随着看到的人和事越多，我越发想要在这里说一些话，告诫路过的各位：
-
-**请务必保护好自己** 我们自认为打破了信息的壁垒，其实打破的是保护我们的屏障。因为外网真的存在很多误导性言论，来自各个利益集团对中国网民疯狂洗脑，他们往往还喜欢以平等自由等旗号自称，但仔细想想真的是这样吗？我只知道美国是最善于运用舆论的国家，会结合大数据潜移默化地改变你的观念。如果大家在上网过程中不经意看到了某些观点，务必保留自己独立思考的能力，如果你是一个容易被带偏的人，则建议回到屏障之中。
-
-本规则只提供给大家用于更便捷地学习和工作。如果你是对上述观点持反对意见的极端政治人士，或者已被洗脑，请立即离开，本项目不对你开放。
-
-------------------------------------------------------
 
 这里是一系列好用的Shadowrocket规则，针对 [Shadowrocket](https://liguangming.com/Shadowrocket) 开发，支持广告过滤。规则定义了哪些网站可以直连，哪些必须走代理，规则是一个纯文本文件，无法提供魔法上网功能。使用 Python 按照一定的规则和模板定期自动生成，并且使用开源的力量，集众人之力逐渐完善。
 
-**正在使用手机浏览本页面的用户 [请点击这里](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever) ，查看完整的说明文档。**
+**正在使用手机浏览本页面的用户 [请点击这里](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever) ，查看完整的说明文档。**
 
 **本规则具有以下特点：**
 
 - 黑名单由最新版 [GFWList](https://github.com/gfwlist/gfwlist) 自动转换；
 - 加入 [Greatfire Analyzer](https://github.com/Loyalsoldier/cn-blocked-domain) 检测到的屏蔽域名；
-- 自动转换最新版本的 `EasyList`, `Eaylist China`, `Peter Lowe 广告和隐私跟踪域名`，`乘风规则` 为 SR 规则，全面去除广告且去除重复；
+- 自动转换最新版本的 **（已修改）** `EasyList`, `Eaylist China`, `Peter Lowe 广告和隐私跟踪域名`，`乘风规则` 为 SR 规则，全面去除广告且去除重复；
 - 包括自定义的广告过滤规则，针对 iOS 端的网页广告、App 广告和视频广告；
 - 提供多个规则文件供大家自由选择或者自由切换使用；
 - 专门针对 ShadowRocket 开发，可以保证与 SR 的兼容性；
 - 将 [Apple及其CDN域名](https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf) 进行优化；
 - 方便的快捷指令与自动化联动，每天自动更新规则；
 - 增加使用代理组的懒人配置；
-- 由于世界排名 top 500 网站列表已无法通过无账户/免费方式取得，故原来的 top500 检测方法失效。我已根据旧的 top500 榜单重构了新的 top500 网站连接情况表。**同时，希望大家可以帮助 pull requests 一份最新的 top500 榜单: [格式](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/blob/build/factory/resultant/top500_manual.list)**
+- 由于世界排名 top 500 网站列表已无法通过无账户/免费方式取得，故原来的 top500 检测方法失效。我已根据旧的 top500 榜单重构了新的 top500 网站连接情况表。**同时，希望大家可以帮助 pull requests 一份最新的 top500 榜单: [格式](https://github.com/xuhuaq/Shadowrocket-ADBlock-Rules-Forever/blob/build/factory/resultant/top500_manual.list)**
 - **所有发布的规则都会在每天北京时间 8:00 更新发布**
 
 
 ## 规则列表
 
-![规则选择指南](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/guide.png)
+![规则选择指南](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/guide.png)
 
 规则 | 规定代理的网站 | 规定直连的网站 
 --- | ----------- | ------------- 
@@ -121,13 +107,13 @@ INTP | Jack of all trades | I use Arch BTW
 
 ## 问题反馈
 
-任何问题欢迎在 [Issues](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/issues) 中反馈。
+任何问题欢迎在 [Issues](https://github.com/xuhuaq/Shadowrocket-ADBlock-Rules-Forever/issues) 中反馈。
 
 你的反馈会让此规则变得更加完美。
 
 **如何贡献代码？**
 
-通常的情况下，对 [factory 目录](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/tree/build/factory) 下的 3 个 `manual_*.txt` 文件做对应修改即可。**Pull requests 请发送至 build 分支。**
+通常的情况下，对 [factory 目录](https://github.com/xuhuaq/Shadowrocket-ADBlock-Rules-Forever/tree/build/factory) 下的 3 个 `manual_*.txt` 文件做对应修改即可。**Pull requests 请发送至 build 分支。**
 
 **如何拥有自己的定制化规则？**
 
@@ -153,9 +139,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 直连：正常的网站
 - 包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_banlist_ad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_banlist_ad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_banlist_ad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_banlist_ad.png)
 
 ## 白名单过滤 + 广告
 
@@ -165,9 +151,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 代理：默认代理其余的所有境外网站
 - 包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_whitelist_ad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_whitelist_ad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_whitelist_ad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_whitelist_ad.png)
 
 
 ## 黑名单过滤
@@ -178,9 +164,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 直连：正常的网站
 - 不包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_banlist.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_banlist.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_banlist.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_banlist.png)
 
 
 ## 白名单过滤
@@ -191,27 +177,27 @@ INTP | Jack of all trades | I use Arch BTW
 - 代理：默认代理其余的所有境外网站
 - 不包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_whitelist.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_top500_whitelist.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_whitelist.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_top500_whitelist.png)
 
 
 ## 国内外划分 + 广告
 
 国内外划分，对中国网站直连，外国网站代理。包含广告过滤。国外网站总是走代理，对于某些港澳台网站，速度反而会比直连更快。
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_cnip_ad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_cnip_ad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_cnip_ad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_cnip_ad.png)
 
 
 ## 国内外划分
 
 国内外划分，对中国网站直连，外国网站代理。不包含广告过滤。国外网站总是走代理，对于某些港澳台网站，速度反而会比直连更快。
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_cnip.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_cnip.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_cnip.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_cnip.png)
 
 
 ## 直连去广告
@@ -221,9 +207,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 直连：所有请求
 - 包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_direct_banad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_direct_banad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_direct_banad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_direct_banad.png)
 
 
 ## 代理去广告
@@ -234,9 +220,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 代理：其余所有请求
 - 包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_proxy_banad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_proxy_banad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_proxy_banad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_proxy_banad.png)
 
 
 ## 回国规则
@@ -247,9 +233,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 代理：中国网站
 - 不包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_backcn.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_backcn.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_backcn.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_backcn.png)
 
 
 ## 回国规则 + 广告
@@ -260,9 +246,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 代理：中国网站
 - 包含广告过滤
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_backcn_ad.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_backcn_ad.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_backcn_ad.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_backcn_ad.png)
 
 
 ## 仅去广告规则
@@ -271,9 +257,9 @@ INTP | Jack of all trades | I use Arch BTW
 
 - 仅包含去广告规则，不包含代理/直连规则。无任何其他配置。
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_ad_only.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/sr_ad_only.png)
 
 
 ----------------------------------------
@@ -288,9 +274,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 规则覆盖范围广
 - 国内外常用app单独分流
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/lazy.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/lazy.png)
 
 
 ## 懒人配置-含策略组
@@ -303,9 +289,9 @@ INTP | Jack of all trades | I use Arch BTW
 - 添加自动切换延迟最低节点类型
 - 通过「代理分组」灵活调整流媒体分流策略
 
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy_group.conf>
+规则地址：<https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy_group.conf>
 
-![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/lazy_group.png)
+![二维码](https://xuhuaq.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/lazy_group.png)
 
 
 ## 鸣谢：
@@ -322,8 +308,3 @@ INTP | Jack of all trades | I use Arch BTW
 [EasyList China](https://adblockplus.org/)  
 [Peter Lowe 广告和隐私跟踪域名](https://pgl.yoyo.org/)   
 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)  
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/Johnshall/Shadowrocket-ADBlock-Rules-Forever.svg)](https://starchart.cc/Johnshall/Shadowrocket-ADBlock-Rules-Forever)
-
